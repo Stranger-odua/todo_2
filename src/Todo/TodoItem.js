@@ -20,15 +20,15 @@ const styles = {
 function TodoItem({todo, index, onChange}) {
     const {removeTodo} = useContext(Context)
 
-    const clases = []
+    const classes = []
 
     if (todo.completed) {
-        clases.push('done')
+        classes.push('done')
     }
 
     return (
         <li style={styles.li}>
-            <span className={clases.join(' ')}>
+            <span className={classes.join(' ')}>
                 <input
                     type="checkbox"
                     checked={todo.completed}
